@@ -1,3 +1,4 @@
+// var MODULE= {}
 var MODULE = (function(module){
 	'use strict';
 

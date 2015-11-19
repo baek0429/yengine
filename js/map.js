@@ -1,15 +1,18 @@
 
-// this is irritating
-// same as $('#map')[0] = document.getElemenetById('map');
+// Note that
+// $('#map')[0] = document.getElemenetById('map');
 // for those who are not famailr with jquery.
 
+// Note that 
+// for unit-build default MODULE is needed
+// var MODULE = {}
 var MODULE = (function(module){
 	module.map = {
 		init:function(){
-			var that = this; // module.map = that;
+			var that = this; // that = module.map;
 			that.map = that.mapCreate();
-			that.zoomControl(that.map);
-			that.filterResult();
+			that.addZoomControl(that.map); 
+			that.filterResult(); // ready filtering result function
 			// that.searchControl();
 		},
 
@@ -31,7 +34,7 @@ var MODULE = (function(module){
 
 		// add zoom control to map
 		// takes Map object and returns nothing
-		zoomControl: function(map){
+		addZoomControl: function(map){
 
 			// zoomcontrol
 			var zoomControl = new daum.maps.ZoomControl();
@@ -50,9 +53,6 @@ var MODULE = (function(module){
         		$('table').filterTable(options);
         	});
 		}
-		// fetchResult: function(){
-
-		// }
 	}
 	return module;
 }(MODULE));

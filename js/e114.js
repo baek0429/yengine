@@ -1,5 +1,5 @@
-/* MODULE is executed by itself and takes "module" which
-is needed to run the application. */
+/* Entry point: MODULE is executed by itself and takes "module" which
+is needed to run the other js scripts. */
 var MODULE = (function(){
 	'use strict'
 
@@ -12,7 +12,8 @@ var MODULE = (function(){
 		that.g = {
 			viewControl: that.view,
 			mapControl: that.map,
-			dataControl: that.parse
+			dataControl: that.parse,
+			hotdataControl: that.hotdata
 		};
 	};
 
@@ -24,6 +25,7 @@ var MODULE = (function(){
 		that.g.viewControl.init();
 		that.g.mapControl.init();
 		that.g.dataControl.init();
+		that.g.hotdataControl.init();
 
 		// only for the web for now.
 		if(typeof window.orientation !== 'undefined') {

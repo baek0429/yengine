@@ -6,6 +6,10 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,
 	margin:0;padding: 0; 
 }
 
+table{
+	border-spacing: 0;
+}
+
 /*navbar*/
 .navbar {
 	position: fixed;
@@ -19,18 +23,18 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,
 }
 
 .navbar .adbox {
-	position: absolute;
+	width: 50%;
+	position: fixed;
 	height: 80px;
-	right: 30%;
-	padding-top: 5px;
+	margin-top: 5px;
+
 	list-style-type: none;
-	padding-right: 5px;
-	padding-bottom: 5px;
-	float:right;
+	right: 30%;
 	color: #EFEFEF;
 }
 
 .navbar .adbox .marquee {
+	text-align: center;
 	height: 60px;
 }
 
@@ -72,12 +76,14 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,
 	padding-top: 20px;
 	list-style-type: none;
 	padding-right: 10px;
-	float:right;
 	color: #EFEFEF;
+	float: right;
 }
 .navbar li {
+	position: relative;
 	margin:3px;
-	float:left;
+	float: right;
+	right: 15%;
 }
 .navbar a {
 	display: block;
@@ -114,30 +120,43 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,
 	z-index: 0;
 }
 .mainapp .container-right{
+	display: block;
 	position: relative;
 	float: right;
 	top: 80px;
-	right: 0%;
-	width: 30%;
+	height: 100%;
+	width: 400px;
+	background-color: white;
+	opacity: .85;
 	z-index: 1;
 }
-
 .mainapp .container-right .list {
 	position: relative;
+	margin: 0;
+	padding: 0;
+	float: left;
+	padding-left: 20px;
+	z-index: 3;
+}
+
+.mainapp .container-right .list .box{
+	position: fixed;
+	top: 80px;
+}
+
+.mainapp .container-right .list table{
+	margin-top: 20px;
+	border-collapse: collapse;
+	border-spacing: 0;
+	cellpadding: 0;
 }
 
 .mainapp .container-right .list tr{
-	list-style-type: none;
+	height: 150px;
+	border-top: 1.2px gray solid;
+	border-left: 0em;
+	border-right: 0em;
 }
 
 .mainapp .container-right .list td{
-	margin: 10px;
-	border-radius: 3px;
-	background-color: white;
-	height: 200px;
-	z-index: 3;
-	padding-top: 20px;
-	padding-left: 20px;
-	padding-right: 10px;
-	opacity: .7;
 }

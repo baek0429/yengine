@@ -5,19 +5,21 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link href="css/mainapp.css" rel='stylesheet' type='text/css' />
+	<!-- Latest compiled and minified CSS -->
+
 </head>
 <body>
 	<div class="navbar">
 		<ul>
-			<li><a>My Page</a></li>
-			<li><a>Browese</a></li>
-			<li><a>Contractors</a></li>
-			<li><a>Logout</a></li>
-			<li><a> </a></li>
 			<li><a>About</a></li>
+			<li><a>Logout</a></li>
+			<li><a>Contractors</a></li>
+			<li><a>Browese</a></li>
+			<li><a>My Page</a></li>
 		</ul>
 		<div class="adbox">
-			<marquee class="marquee" behavior="scroll" direction="up" scrollamount="1">Your upward scrolling text goes here</marquee>
+			<marquee class="marquee" behavior="scroll" direction="up" scrollamount="1">Your upward scrolling text goes here
+			</marquee>
 		</div>
 		<div class="brand" id="brand">
 			<h1 href="">Branding</h1>
@@ -35,11 +37,11 @@
 		</div>
 		<div class="container-right">
 			<div class="list">
-				<table id ="searchResult">
-					<form onsubmit="MODULE.g.dataControl.daumSearch(); return false;" class="box">
-						<input type="search" id="quickSearch"/>
-						<button type="submit">검색하기</button> 
-					</form>
+				<form onsubmit="MODULE.g.dataControl.daumSearch(); return false;" class="box">
+					<input type="search" id="quickSearch"/>
+					<button type="submit">검색하기</button> 
+				</form>
+				<table class="table-striped" id ="searchResult">
 					<thead>
 						<tr>
 							<th scope="col" title="President Number">#</th>
@@ -94,6 +96,8 @@
 						<tr><td>43</td><td>George Walker Bush</td><td>two</td><td>2001-2009</td></tr>
 						<tr><td>44</td><td>Barack Hussein Obama</td><td>one</td><td>2009-</td></tr>
 					</tbody>
+					<div class="tback">
+					</div>
 				</table>
 			</div>
 		</div>
@@ -110,6 +114,7 @@
 	<script type="text/javascript" src="js/map.js"></script>
 	<script src="js/view.js"></script>
 	<script src="js/parse.js"></script>
+	<script src="js/hotdata.js"></script>
 
 	<!-- js libraries -->
 	<!-- jquery-table-by-sunny -->
