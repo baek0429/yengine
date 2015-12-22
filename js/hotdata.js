@@ -1,6 +1,6 @@
 // 100 hot data by each field.
 // for unit building test
-var MODULE = {}
+// var MODULE = {}
 var MODULE = (function(module){
 	module.hotdata = {
 		init: function(){
@@ -12,14 +12,13 @@ var MODULE = (function(module){
 			module.hot100.data = {};
 			module.hot100.status = {};
 			module.hot100.data.places = [];
-			module.hot100.data.hello = [];
+			module.hot100.pagination = {};
 
 			for (var i = 0; i < 100; i++) {
 				module.hot100.status = "OK";
 				module.hot100.data.places[i] = module.hotdata.fetch100fortest();
+				module.hot100.pagination = "0";
 			}
-			console.log(module.hot100.data.places[0]);
-			console.log(module.hot100.data.places[1]);
 		},
 		fetch100fortest: function(){
 			var that = this;
@@ -36,7 +35,3 @@ var MODULE = (function(module){
 	}
 	return module;
 }(MODULE));
-
-MODULE.hotdata.init();
-
-
